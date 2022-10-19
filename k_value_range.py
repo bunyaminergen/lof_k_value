@@ -119,7 +119,9 @@ class LOF:
         print(*[sorted(i) for i in outl_list], sep="\n")
         print("_"*50)
 
-        # get the intersection set of the variable outl_list (sets of otliers list) with all the results        outl_inters = set.intersection(*outl_list)
+        # get the intersection set of the variable outl_list (sets of otliers list) with all the results
+
+        outl_inters = set.intersection(*outl_list)
 
         print("intersection set of n_neighbors results")
         print(sorted(list(outl_inters)))
@@ -133,3 +135,7 @@ class LOF:
 
 
 LOF.LOF(data, np.arange(10, 150, 10))
+
+# or
+
+LOF.LOF(data, [10,20,40,70,110])
